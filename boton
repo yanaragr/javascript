@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Soy Yanara</title>
+</head>
+<body>
+
+<h1>soy yanara</h1>
+
+<a href="#" id="mostrarBoton">Mostrar botón</a>
+
+<br><br>
+
+<button id="btnFecha" style="display:none;"></button>
+
+<script>
+  const hoy = new Date();
+  const fecha = hoy.toLocaleDateString('es-ES');
+
+  const boton = document.getElementById("btnFecha");
+  boton.textContent = fecha;
+  boton.style.backgroundColor = "blue";
+  boton.style.color = "white";
+  boton.style.padding = "10px 15px";
+  boton.style.border = "none";
+  boton.style.borderRadius = "5px";
+
+  document.getElementById("mostrarBoton").addEventListener("click", function(e) {
+    e.preventDefault();
+    boton.style.display = "inline-block";
+  });
+
+  boton.addEventListener("click", function() {
+    boton.style.backgroundColor = "red";
+  });
+</script>
+
+</body>
+</html>
